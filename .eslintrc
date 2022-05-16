@@ -5,8 +5,7 @@
 		"node": true,
 		"es2021": true
 	},
-	"ignorePatterns": ["src/*.d.ts"],
-	"parser": "@typescript-eslint/parser",
+	"parser": "babel-eslint",
 	"plugins": ["react-prefer-function-component", "editorconfig"],
 	"extends": [
 		"eslint:all",
