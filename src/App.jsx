@@ -8,7 +8,7 @@ import Plugins from './plugins';
 import Providers from './context';
 
 function Pages() {
-  return useRoutes(routes);
+    return useRoutes(routes);
 }
 
 export default function () {
