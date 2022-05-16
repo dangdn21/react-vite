@@ -34,7 +34,7 @@ export default function () {
               <Row className="justify-between">
                 <Col>
                   <h1 className="mt-5 text-5xl">
-                    {t('Top 10 Cryptocurrencies in the world')}
+                                                    {t('Top 10 Cryptocurrencies in the world')}
                   </h1>
                 </Col>
 

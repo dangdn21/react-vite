@@ -102,13 +102,11 @@
         "workbox-window": "^6.4.2"
     },
     "lint-staged": {
-        "*.{js,jsx}": [
-            "pnpm lint:js"
-        ]
-    },
-    "husky": {
-      "hooks": {
-          "pre-commit": "lint-staged"
-     }
-  }
+      "*.{js,ts,tsx}": [
+          "eslint --quiet --cache --fix"
+      ],
+      "*.{json,js,ts,jsx,tsx,html}": [
+          "prettier --write"
+      ]
+    }
 }
