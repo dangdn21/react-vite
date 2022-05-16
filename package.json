@@ -18,6 +18,7 @@
         "extract-translations": "i18next --fail-on-warnings",
         "prepare:husky": "husky install",
         "lint": "pnpm lint:js",
+        "lint:staged": "lint-staged",
         "lint:js": "pnpm lint:eslint -- . ",
         "lint:eslint": "eslint --fix --ignore-path .gitignore --ext .js,.jsx src"
     },
@@ -104,5 +105,10 @@
         "*.{js,jsx}": [
             "pnpm lint:js"
         ]
-    }
+    },
+    "husky": {
+      "hooks": {
+          "pre-commit": "lint-staged"
+     }
+  }
 }
