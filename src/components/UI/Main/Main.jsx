@@ -1,13 +1,13 @@
-import i18n from "i18next";
-import { useContext, useEffect, useState } from "react";
-import clsx from "clsx";
-import { MainContext } from "./MainContext";
-import WindowVariables from "../../../hooks/WindowVars";
-import MainProvider from "./MainProvider";
+import i18n from 'i18next';
+import { useContext, useEffect, useState } from 'react';
+import clsx from 'clsx';
+import MainContext  from './MainContext';
+import WindowVariables from '~/hooks/WindowVars';
+import MainProvider from './MainProvider';
 
-export default function (properties) {
+export default function Main(properties) {
   const { sideBarState: sideBar, sideBarOpts, overlayState, setOverlayState, overlays } = useContext(MainContext);
-  const [mainStyle, setMainStyle] = useState < CSSProperties > {};
+  const [mainStyle, setMainStyle] = useState({});
   const { windowWidth } = WindowVariables();
 
   const { children, className } = properties;
@@ -31,7 +31,7 @@ export default function (properties) {
 
   useEffect(() => {
     if (shrinkPoint && sideBar && windowWidth > shrinkPoint) {
-      if (dir === "ltr") {
+      if (dir === 'ltr') {
         setMainStyle({
           marginLeft: `${sideBarOpts.width}px`,
         });
@@ -52,7 +52,7 @@ export default function (properties) {
           id="overlay"
           role="presentation"
           className={`opacity transition-opacity ease-out-in duration-400 dark:bg-dark-800
-		                    ${overlayState ? "fixed h-full w-full bg-dark-200 opacity-40 z-20" : "opacity-0"}`}
+		                    ${overlayState ? 'fixed h-full w-full bg-dark-200 opacity-40 z-20' : 'opacity-0'}`}
           onClick={overlayToggle}
         />
 

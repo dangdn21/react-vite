@@ -1,8 +1,8 @@
-import React from 'react';
 import { useEffect, useState } from 'react';
 
-import { LocalStorage } from '../../../modules/LocalStorage';
-import { ThemeContext, getInitialTheme } from './ThemeContext';
+
+import { LocalStorage } from '~/modules/LocalStorage';
+import ThemeContext, { getInitialTheme } from './ThemeContext';
 
 const rawSetTheme = (theme) => {
   const root = window.document.documentElement;
@@ -14,8 +14,8 @@ const rawSetTheme = (theme) => {
   LocalStorage.setTheme(theme);
 };
 
-export default function ({ children }) {
-  const [theme, setTheme] = useState<ThemeName>(getInitialTheme);
+export default function ThemeProvider({ children }) {
+  const [theme, setTheme] = useState(getInitialTheme);
 
   useEffect(() => {
     rawSetTheme(theme);

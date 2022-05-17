@@ -1,5 +1,5 @@
 import BingNewsApi from './BingNews';
-import { Vars as Variables } from '../../modules/vars';
+import Variables from '~/modules/vars';
 
 const BING_NEWS_RAPIAPI_URL = Variables.rapidApi.bingNews.url;
 const BING_NEWS_RAPIAPI_HOST = Variables.rapidApi.bingNews.host;

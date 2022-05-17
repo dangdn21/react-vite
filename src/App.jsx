@@ -1,22 +1,20 @@
-import { useRoutes } from "react-router-dom";
-import { RecoilRoot } from "recoil";
+import { useRoutes } from 'react-router-dom';
+import { RecoilRoot } from 'recoil';
 
-import routes from "~react-pages";
+import routes from '../router.config';
 
-import ReloadPrompt from "./components/ReloadPrompt";
-import Plugins from "./plugins";
-import Providers from "./context";
+import Plugins from './modules/plugins';
+import Providers from './context';
 
 function Pages() {
   return useRoutes(routes);
 }
 
-export default function () {
+export default function App() {
   Plugins();
   return (
     <Providers>
       <RecoilRoot>
-        <ReloadPrompt />
         <Pages />
       </RecoilRoot>
     </Providers>

@@ -1,7 +1,7 @@
 import './Tooltip.css';
 import clsx from 'clsx';
 
-export default function (properties) {
+export default function Tooltip(properties) {
   return (
     <div className="flex w-fit">
       <div {...properties} className="has-tooltip relative">

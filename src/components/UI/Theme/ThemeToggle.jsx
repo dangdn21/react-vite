@@ -1,9 +1,9 @@
 import { useContext } from 'react';
-import { ThemeContext } from './ThemeContext';
+import ThemeContext from './ThemeContext';
 import Tooltip from '../Tooltip/Tooltip';
 import IconButton from '../Buttons/IconButton';
 
-export default function (properties) {
+export default function ThemeToggle(properties) {
   const { theme, setTheme } = useContext(ThemeContext);
   const { t } = useTranslation();
 

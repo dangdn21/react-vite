@@ -3,8 +3,8 @@ import { useContext, useEffect } from 'react';
 import clsx from 'clsx';
 import Col from '../Grid/Col';
 import IconButton from '../Buttons/IconButton';
-import { defaultMainData, MainContext } from '../Main/MainContext';
-import windowVariables from '../../../hooks/WindowVars';
+import { MainContext, defaultMainData }  from '~/components/UI/Main';
+import windowVariables from '~/hooks/WindowVars';
 import Overlay from '../Overlay/Overlay';
 
 const { sideBarOpts: defaultSideBarOptions } = defaultMainData;
@@ -46,11 +46,11 @@ function SideBar(properties = defaultProps) {
 		      overlays,
 	      } = useContext(MainContext);
 
-  const setOpenState = (state) => {
-    setState(state);
+  const setOpenState = (newSate) => {
+    setState(newSate);
 
     if (shrinkPoint && windowWidth < shrinkPoint) {
-      if (state) {
+      if (newSate) {
         addOverlay({
           onClick: () => {
             setOpenState(false);

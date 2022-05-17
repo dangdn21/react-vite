@@ -1,5 +1,5 @@
 import { useQuery } from 'react-query';
-import ApiUrlService from '../../modules/ApiUrlService';
+import ApiUrlService from '~/modules/ApiUrlService';
 
 const defaultQueryConfig = {};
 
@@ -12,7 +12,7 @@ export default class BingNewsApi extends ApiUrlService {
     this.config = bingNewsApi.config;
   }
 
-  news(){
+  news() {
     return {
 
       urlParams: this.buildUrlParams({

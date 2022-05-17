@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom";
-import React from "react";
-import i18n from "i18next";
-import clsx from "clsx";
+import { Link } from 'react-router-dom';
 
-export default function (properties) {
+import i18n from 'i18next';
+import clsx from 'clsx';
+
+export default function LinkButton(properties) {
   const dir = i18n.dir();
 
   return (
@@ -27,9 +27,9 @@ export default function (properties) {
       >
         <div
           className={clsx(
-            dir === "ltr" && "hover:translate-x-2",
-            dir === "rtl" && "hover:(-translate-x-2)",
-            "px-4 py-2 mt-2 transform transition-transform ease-in duration-200 opacity-100"
+            dir === 'ltr' && 'hover:translate-x-2',
+            dir === 'rtl' && 'hover:(-translate-x-2)',
+            'px-4 py-2 mt-2 transform transition-transform ease-in duration-200 opacity-100',
           )}
         >
           {properties.children}

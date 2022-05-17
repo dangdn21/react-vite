@@ -17,14 +17,16 @@
         "dev": "cross-env VITE_ENV=development vite",
         "extract-translations": "i18next --fail-on-warnings",
         "prepare:husky": "husky install",
+        "prepare": "husky install",
         "lint": "pnpm lint:js",
         "lint:staged": "lint-staged",
         "lint:js": "pnpm lint:eslint -- . ",
-        "lint:eslint": "eslint --fix --ignore-path .gitignore --ext .js,.jsx src"
+        "lint:eslint": "eslint src/**/*.js[x] --fix --ignore-path .gitignore --ext .js,.jsx  --quiet"
     },
     "dependencies": {
         "axios": "^0.24.0",
         "clsx": "^1.1.1",
+        "dayjs": "^1.11.2",
         "formik": "^2.2.9",
         "i18next": "^21.6.3",
         "i18next-browser-languagedetector": "^6.1.2",
@@ -69,9 +71,10 @@
         "cssnano": "^5.0.15",
         "daisyui": "^1.25.4",
         "esbuild": "^0.14.14",
-        "eslint": "^8.5.0",
+        "eslint": "^8.15.0",
         "eslint-config-airbnb": "^19.0.2",
         "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-import-resolver-alias": "^1.1.2",
         "eslint-plugin-editorconfig": "^3.2.0",
         "eslint-plugin-import": "^2.25.3",
         "eslint-plugin-jsx-a11y": "^6.5.1",
@@ -102,11 +105,11 @@
         "workbox-window": "^6.4.2"
     },
     "lint-staged": {
-      "*.{js,ts,tsx}": [
-          "eslint --quiet --cache --fix"
-      ],
-      "*.{json,js,ts,jsx,tsx,html}": [
-          "prettier --write"
-      ]
+        "*.{js,ts,tsx}": [
+            "pnpm run lint:eslint"
+        ],
+        "*.{json,js,ts,jsx,tsx,html}": [
+            "prettier --write"
+        ]
     }
 }

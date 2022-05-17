@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 
-export default function (properties) {
+export default function Card(properties) {
   return (
     <div
       {...properties}

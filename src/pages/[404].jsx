@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import clsx from 'clsx';
-import Tab from '../components/UI/Tabs/Tab';
-import Tabs from '../components/UI/Tabs/Tabs';
-import Error404 from '../components/UI/ErrorPages/404';
-import Error403 from '../components/UI/ErrorPages/403';
-import Error404ServerSide from '../components/UI/ErrorPages/404ServerSide';
-import ConditionalAnimation from '../components/UI/Animation/ConditionalAnimation';
-import Subtitle from '../components/UI/Typography/Subtitle';
+import Tab from '~/components/UI/Tabs/Tab';
+import Tabs from '~/components/UI/Tabs/Tabs';
+import Error404 from '~/components/UI/ErrorPages/404';
+import Error403 from '~/components/UI/ErrorPages/403';
+import Error404ServerSide from '~/components/UI/ErrorPages/404ServerSide';
+import ConditionalAnimation from '~/components/UI/Animation/ConditionalAnimation';
+import Subtitle from '~/components/UI/Typography/Subtitle';
 
 const creditItems = {
   404: {
@@ -23,7 +23,7 @@ const creditItems = {
   },
 };
 
-export default function () {
+export default function ErrorPage() {
   const [tab, setTab] = useState('404');
   const [credit, setCredit] = useState(creditItems['404']);
   const {
@@ -31,9 +31,9 @@ export default function () {
 		      creditLink,
 	      } = credit;
 
-  const changeTab = (tab) => {
-    setTab(tab);
-    setCredit(creditItems[tab]);
+  const changeTab = (newTab) => {
+    setTab(newTab);
+    setCredit(creditItems[newTab]);
   };
 
   return (

@@ -10,4 +10,5 @@ export const defaultMainData = {
   overlays: [],
 };
 
-export const MainContext = createContext({});
+const MainContext = createContext({});
+export default MainContext;

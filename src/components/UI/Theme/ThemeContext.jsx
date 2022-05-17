@@ -1,7 +1,7 @@
 
 import { createContext } from 'react';
-import { LocalStorage } from '../../../modules/LocalStorage';
-import { Vars as Variables } from '../../../modules/vars';
+import { LocalStorage } from '~/modules/LocalStorage';
+import Variables from '~/modules/vars';
 
 export const getInitialTheme = () => {
   const { defaultTheme } = Variables.theme;
@@ -19,4 +19,6 @@ export const getInitialTheme = () => {
   return defaultTheme;
 };
 
-export const ThemeContext = createContext({});
+const ThemeContext = createContext({});
+
+export default ThemeContext;

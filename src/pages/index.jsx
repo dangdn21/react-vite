@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router';
-import SideBar from '../components/SideBar';
-import Main from '../components/UI/Main/Main';
+import SideBar from '~/components/SideBarContainer/SideBarContainer';
+import Main from '~/components/UI/Main/Main';
 
 export default function () {
   return (

@@ -1,6 +1,6 @@
 
 
-export default function (properties) {
+export default function IconButton(properties) {
   return (
     <div {...properties}>
       <div className="

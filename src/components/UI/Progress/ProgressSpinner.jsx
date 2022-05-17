@@ -1,7 +1,7 @@
 import { ImpulseSpinner } from 'react-spinners-kit';
 import clsx from 'clsx';
 
-export default function (properties) {
+export default function ProgressSpinner(properties) {
   return (
     <div className="relative h-full">
       <div {...properties} className={`absolute top-[50%] left-[50%] ${clsx(properties.className)}`}>

@@ -31,6 +31,7 @@ export default class ApiUrlService {
 
   static encodeQueryData(data) {
     const returnValue = [];
+    // eslint-disable-next-line no-unused-vars
     for (const key of Object.keys(data)) {
       if (data[key]) {
         returnValue.push(`${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`);

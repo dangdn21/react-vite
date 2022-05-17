@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { MainContext } from '../Main/MainContext';
+import { MainContext }  from '~/components/UI/Main';
 
 const defaultOverlay = {
   onClick: () => null,

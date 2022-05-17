@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { defaultMainData, MainContext } from './MainContext';
+import MainContext, { defaultMainData } from './MainContext';
 
-export default function (properties) {
+export default function MainProvider(properties) {
   const {
 		      sideBarState: defaultSideBarState,
 		      sideBarOpts: defaultSideBarOptions,

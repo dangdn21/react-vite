@@ -1,7 +1,7 @@
-import React from 'react';
 import { useState, useEffect } from 'react';
 
-export default function (properties) {
+
+export default function ConditionalAnimation(properties) {
   const [render, setRender] = useState(false);
 
   const { condition, timeout, children } = properties;

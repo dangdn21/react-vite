@@ -1,12 +1,12 @@
 import { useContext } from 'react';
 import Overlay from '../Overlay/Overlay';
-import { defaultMainData, MainContext } from '../Main/MainContext';
-import windowVariables from '../../../hooks/WindowVars';
+import { MainContext, defaultMainData }  from '~/components/UI/Main';
+import windowVariables from '~/hooks/WindowVars';
 
 const { sideBarOpts: defaultSideBarOptions } = defaultMainData;
 const { shrinkPoint: defaultShrinkPoint } = defaultSideBarOptions;
 
-export default function (properties) {
+export default function SideBarLink(properties) {
   const { children, ...restProperties } = properties;
 
   const { removeOverlay } = Overlay();

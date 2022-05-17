@@ -1,12 +1,12 @@
-import { Link } from "react-router-dom";
-import { useRef, useEffect } from "react";
-import windowVariables from "../../../hooks/WindowVars";
-import "./403.css";
-import Particles from "react-tsparticles";
-import clsx from "clsx";
-import particles from "./Particles";
+import { Link } from 'react-router-dom';
+import { useRef, useEffect } from 'react';
+import windowVariables from '../../../hooks/WindowVars';
+import './403.css';
+import Particles from 'react-tsparticles';
+import clsx from 'clsx';
+import particles from './Particles';
 
-export default function (properties) {
+export default function ForbiddenError(properties) {
   const eyef = useRef(null);
   const { windowHeight, windowWidth, pointerX, pointerY } = windowVariables();
 
@@ -16,8 +16,8 @@ export default function (properties) {
     const x = (pointerX / windowWidth).toString();
     const y = (pointerY / windowHeight).toString();
 
-    root.style.setProperty("--mouse-x", x);
-    root.style.setProperty("--mouse-y", y);
+    root.style.setProperty('--mouse-x', x);
+    root.style.setProperty('--mouse-y', y);
   }, [pointerX, pointerY]);
 
   return (
@@ -30,7 +30,7 @@ export default function (properties) {
               <circle id="white-eye" fill="#cacaca" cx="130" cy="65" r="20" />
             </clipPath>
             <text id="text-s" className="error-text" y="106">
-              {" "}
+              {' '}
               403
             </text>
           </defs>

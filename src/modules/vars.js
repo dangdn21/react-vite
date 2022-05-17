@@ -1,21 +1,21 @@
-export class Vars {
+export default class Vars {
   static appName;
 
   static env;
 
   static theme = {
-    defaultTheme,
+    defaultTheme: '',
   };
 
   static rapidApi = {
-    apiKey,
+    apiKey: '',
     bingNews: {
-      url,
-      host,
+      url: '',
+      host: '',
     },
     coinsRanking: {
-      url,
-      host,
+      url: '',
+      host: '',
     },
   };
 

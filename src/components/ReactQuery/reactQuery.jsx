@@ -11,7 +11,7 @@ const queryClient = new QueryClient({
   },
 });
 
-export default function (properties) {
+export default function ReactQuery(properties) {
   return (
     <QueryClientProvider client={queryClient}>
       {properties.children}

@@ -1,6 +1,6 @@
 import './CubicProgress.css';
 
-export default function () {
+export default function CubicProgress() {
   return (
     <div className="sk-cube-grid">
       <div className="sk-cube sk-cube1" />

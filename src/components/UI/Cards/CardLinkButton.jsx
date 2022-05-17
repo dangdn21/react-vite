@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-export default function ({ children, to }) {
+export default function CardLinkButton({ children, to }) {
   return (
     <Link
       to={to}

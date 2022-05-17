@@ -1,5 +1,3 @@
-import React from 'react';
-
 import clsx from 'clsx';
 
 const style = 'rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 '
@@ -7,7 +5,7 @@ const style = 'rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:
 	+ 'dark:focus:text-white dark:hover:text-white dark:text-gray-200 hover:text-gray-900'
 	+ 'focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline';
 
-export default function (properties) {
+export default function Button(properties) {
   const { children, className } = properties;
 
   return <button {...properties} className={style + clsx(className)} type="button">{children}</button>;

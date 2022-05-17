@@ -1,6 +1,6 @@
-import ProgressSpinner from '../UI/Progress/ProgressSpinner';
+import ProgressSpinner from '~/components/UI/Progress/ProgressSpinner';
 
-export default function ({ children, status }) {
+export default function QueryHandler({ children, status }) {
   return (
     <>
       {status === 'loading' && (

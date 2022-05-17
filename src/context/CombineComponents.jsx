@@ -1,7 +1,7 @@
 // combineComponents.tsx
-import React from 'react';
 
-export default (...components) => components.reduce((AccumulatedComponents, CurrentComponent) => function ({ children }) {
+
+export default (...components) => (components || []).reduce((AccumulatedComponents, CurrentComponent) => function CombineComponents({ children }) {
   return (
     <AccumulatedComponents>
       <CurrentComponent>
@@ -9,4 +9,4 @@ export default (...components) => components.reduce((AccumulatedComponents, Curr
       </CurrentComponent>
     </AccumulatedComponents>
   );
-}, ({ children }) => <>{children}</>);
+}, ({ children }) => children);

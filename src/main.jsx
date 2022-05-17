@@ -1,13 +1,13 @@
-import { Suspense } from "react";
-import { BrowserRouter as Router } from "react-router-dom";
-import ReactDOM from "react-dom";
+import { Suspense } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import ReactDOM from 'react-dom';
 
-import "./setup";
-import "./styles/cssLibraries";
+import './setup';
+import '~/styles/cssLibraries';
 
-import App from "./App";
-import ReactQuery from "./components/ReactQuery/reactQuery";
-import ProgressSpinner from "./components/UI/Progress/ProgressSpinner";
+import App from './App';
+import ReactQuery from '~/components/ReactQuery/ReactQuery';
+import ProgressSpinner from '~/components/UI/Progress/ProgressSpinner';
 
 ReactDOM.render(
   <ReactQuery>
@@ -17,5 +17,5 @@ ReactDOM.render(
       </Suspense>
     </Router>
   </ReactQuery>,
-  document.querySelector("#root")
+  document.querySelector('#root'),
 );

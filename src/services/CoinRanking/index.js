@@ -1,5 +1,5 @@
 import CoinRankingApi from './CoinRanking';
-import { Vars as Variables } from '../../modules/vars';
+import Variables from '~/modules/vars';
 
 const COINRANKING_RAPIAPI_URL = Variables.rapidApi.coinsRanking.url;
 const COINRANKING_RAPIAPI_HOST = Variables.rapidApi.coinsRanking.host;

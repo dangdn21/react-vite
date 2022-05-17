@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import clsx from 'clsx';
 import particles from './Particles';
 
-export default function (properties) {
+export default function NotFoundServerSideError(properties) {
   const [visorContext, setVisorContext] = useState();
 
   const drawVisor = () => {
@@ -79,7 +79,7 @@ export default function (properties) {
           <div className="astronaut__head">
             <canvas
               id="visor"
-              // ref={(c) => { setVisorContext(c?.getContext('2d')!); }}
+              ref={(c) => { setVisorContext(c?.getContext('2d')); }}
               width="60px"
               height="60px"
             />

@@ -1,5 +1,5 @@
 import { useQuery } from 'react-query';
-import ApiUrlService from '../../modules/ApiUrlService';
+import ApiUrlService from '~/modules/ApiUrlService';
 
 const defaultQueryConfig = {};
 
