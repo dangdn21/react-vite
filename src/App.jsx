@@ -4,7 +4,7 @@ import { RecoilRoot } from 'recoil';
 import routes from '../router.config';
 
 import Plugins from './modules/plugins';
-import Providers from './context';
+import Providers from './contexts';
 
 function Pages() {
   return useRoutes(routes);
