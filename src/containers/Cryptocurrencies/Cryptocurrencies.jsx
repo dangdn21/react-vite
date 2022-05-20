@@ -20,8 +20,7 @@ export default function Cryptocurrencies({ coins }) {
 						xs:grid-cols-1"
     >
       {coins
-        && coins.length > 0
-        && coins.map((coin, index) => (
+        && coins.length > 0 ? coins.map((coin, index) => (
           <Col className="p-2" key={coin.name}>
             <a href={coin.coinrankingUrl}>
               <Card className="h-60">
@@ -69,7 +68,7 @@ export default function Cryptocurrencies({ coins }) {
               </Card>
             </a>
           </Col>
-        ))}
+        )) : null}
     </Row>
   );
 }

@@ -2,7 +2,7 @@ import i18nNext from 'i18next';
 import { useEffect } from 'react';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import Backend from 'i18next-http-backend';
-import moment from 'moment';
+import dayjs from 'dayjs';
 import { LocalStorage } from '~/modules/LocalStorage';
 
 const getLanguage = () => {
@@ -28,7 +28,7 @@ const getLanguage = () => {
         escapeValue: false,
         format: (value, format) => {
           if (value instanceof Date) {
-            return moment(value)
+            return dayjs(value)
               .format(format);
           }
           return value;
@@ -58,14 +58,14 @@ const i18nInstall = () => {
       LocalStorage.setLanguage('en');
       i18n.changeLanguage('en')
         .then(() => {
-          document.dir = i18n.dir('en');
+          document.dir = i18n.dir && i18n.dir('en');
         })
         .catch((error) => {
           throw error;
         });
     }
 
-    window.document.dir = i18n.dir(language);
+    window.document.dir = i18n.dir && i18n.dir(language);
   }, []);
 };
 

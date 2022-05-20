@@ -10,6 +10,7 @@ import { VitePWA } from 'vite-plugin-pwa';
 import Inspect from 'vite-plugin-inspect';
 import istanbul from 'rollup-plugin-istanbul';
 import { extendRoute, onRouteGenerate } from './router.config';
+import jsconfigPaths from 'vite-jsconfig-paths'
 
 const ENV = process.env.VITE_ENV;
 
@@ -53,7 +54,7 @@ export default defineConfig({
         }),
       ],
       include: [
-        /\.[jt]sx?$/, // .ts, .tsx, .js, .jsx
+        /\.[tj]sx?$/, // .js, .jsx
         /\.md$/, // .md
       ],
       imports: [
@@ -62,6 +63,7 @@ export default defineConfig({
           'react-i18next': ['useTranslation', 'initReactI18next'],
         },
       ],
+      dts: false,
     }),
 
     // https://github.com/antfu/unplugin-icons
@@ -101,12 +103,13 @@ export default defineConfig({
     // https://github.com/nabla/vite-plugin-eslint#readme
     // EslintPlugin(),
 
+    jsconfigPaths(),
+
     ENV === 'test'
     && istanbul({
       include: ['src/**/*.{js,jsx}'],
     }),
   ],
-
   build: {
     sourcemap: process.env.SOURCE_MAP === 'true',
     rollupOptions: {
@@ -126,14 +129,13 @@ export default defineConfig({
       },
     },
   },
-  publicDir: './public',
   preview: {
-    open: false,
+    open: true,
     port: 4000,
   },
 
   server: {
-    open: false, // open in browser on server start
+    open: true, // open in browser on server start
     port: 8080,
     hmr: {
       protocol: 'ws',

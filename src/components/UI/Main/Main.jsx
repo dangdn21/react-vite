@@ -13,7 +13,7 @@ export default function Main(properties) {
   const { children, className } = properties;
   const { shrinkPoint } = sideBarOpts;
 
-  const dir = i18n.dir();
+  const dir = i18n.dir && i18n.dir();
 
   useEffect(() => {
     if (overlays.length > 0) {

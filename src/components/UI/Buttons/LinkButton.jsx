@@ -4,7 +4,7 @@ import i18n from 'i18next';
 import clsx from 'clsx';
 
 export default function LinkButton(properties) {
-  const dir = i18n.dir();
+  const dir = i18n.dir && i18n.dir();
 
   return (
     <Link {...properties}>

@@ -6,7 +6,7 @@ import { convertToElId as convertToElementId } from '~/modules/utils/common';
 
 
 export default function NumberTooltip(properties) {
-  const dir = i18n.dir();
+  const dir = i18n.dir && i18n.dir();
 
   const {
 		      number,

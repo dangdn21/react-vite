@@ -9,7 +9,7 @@ export default function LanguageSelector(properties) {
   const changeLanguage = async (language) => {
     await i18n.changeLanguage(language);
     LocalStorage.setLanguage(language);
-    document.dir = i18n.dir();
+    document.dir = i18n.dir && i18n.dir();
   };
 
   const languageToggle = async () => {

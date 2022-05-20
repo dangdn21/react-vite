@@ -20,7 +20,7 @@ const defaultProps = { width: defaultWidth, shrinkPoint: defaultShrinkPoint };
  * }
  */
 function SideBar(properties = defaultProps) {
-  const dir = i18n.dir();
+  const dir = i18n.dir && i18n.dir();
   const {
 		      addOverlay,
 		      removeOverlay,
