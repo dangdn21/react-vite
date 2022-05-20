@@ -6,7 +6,7 @@ module.exports = {
     default: ['JavascriptLexer'],
   },
 
-  locales: ['en', 'he'],
+  locales: ['en', 'he', 'vi'],
   // An array of the locales in your applications
 
   namespaceSeparator: '.',
@@ -19,7 +19,7 @@ module.exports = {
   // Where to write the locale files relative to process.cwd()
 
   input: [
-    'src/**/*.tsx',
+    'src/**/*.jsx',
   ],
   // An array of globs that describe where to look for source files
   // relative to the location of the configuration file

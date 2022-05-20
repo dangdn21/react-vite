@@ -1,7 +1,7 @@
 import QueryHandler from '~/components/ReactQuery/QueryHandler';
 import bingNewsApi from '../../services/BingNews';
 import { Row, Col } from '~/components/UI/Grid';
-import News from '~/pages/News/News';
+import News from '~/containers/News/News';
 
 export default function NewsContainer() {
   const { data, status } = bingNewsApi.news().get();

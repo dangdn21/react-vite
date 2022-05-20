@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import { Row, Col } from '~/components/UI/Grid';
 import QueryHandler from '~/components/ReactQuery/QueryHandler';
-import CryptoStats from '~/pages/CryptoStats';
-import Cryptocurrencies from '~/pages/Cryptocurrencies';
+import CryptoStats from '~/containers/CryptoStats';
+import Cryptocurrencies from '~/containers/Cryptocurrencies';
 import coinRankingApi from '../../services/CoinRanking';
 
 export default function Home() {

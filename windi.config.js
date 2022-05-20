@@ -8,7 +8,7 @@ const markdownWrapperClasses = ['prose prose-sm', 'm-auto', 'text-left'];
 
 export default defineConfig({
   darkMode: 'class',
-  content:  ['./index.html', 'src/**/*.{html,js,css,tsx}'],
+  content: ['./index.html', 'src/**/*.{html,js,css,jsx}'],
   // https://windicss.org/posts/v30.html#attributify-mode
   attributify: true,
 
@@ -29,19 +29,19 @@ export default defineConfig({
   daisyui: {
     styled: true,
     themes: true,
-    base:   true,
-    utils:  true,
-    logs:   true,
-    rtl:    false,
+    base: true,
+    utils: true,
+    logs: true,
+    rtl: false,
   },
 
   theme: {
     screens: {
-      xs:  '0px',
-      sm:  '576px',
-      md:  '768px',
-      lg:  '992px',
-      xl:  '1200px',
+      xs: '0px',
+      sm: '576px',
+      md: '768px',
+      lg: '992px',
+      xl: '1200px',
       '2xl': '1500px',
       '3xl': '1800px',
     },

@@ -1,4 +1,4 @@
-import moment from 'moment';
+import dayjs from 'dayjs';
 import Card from '~/components/UI/Cards/Card';
 import { Col, Row } from '~/components/UI/Grid';
 import Subtitle from '~/components/UI/Typography/Subtitle';
@@ -54,7 +54,7 @@ export default function News({ value }) {
               </Col>
 
               <Subtitle className="relative px-2 text-sm text-gray-400 dark:text-true-gray-400 break-all line-clamp-1">
-                {moment(newsItem.datePublished).startOf('s').fromNow()}
+                {dayjs(newsItem.datePublished).format('YYYY-MM-DDTHH:mm:ssZ[Z]')}
               </Subtitle>
             </Row>
           </Card>

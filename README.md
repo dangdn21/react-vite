@@ -5,6 +5,25 @@ yarn install
 yarn start
 ```
 
+## Using
+
+
+#### `daisyui`
+#### `windicss`
+#### `axios`
+#### `dayjs`
+#### `Formik`
+#### `i18next`
+#### `lodash`
+#### `i18next`
+#### `react-query`
+#### `react-router` version 6 vs `vite-plugin-page` to configure dynamic route in pages folder
+#### `recoil`
+#### `fullcalendar`
+
+
+
+
 
 ## Coding Convention
 1. Please keep the folder structure..

@@ -11,7 +11,7 @@ import Row from '../UI/Grid/Row';
 import Col from '../UI/Grid/Col';
 import SideBarLink from '../UI/SideBar/SideBarLink';
 // eslint-disable-next-line import/no-unresolved
-import FavIcon from 'favicon.svg';
+import FavIcon from '/favicon.svg';
 
 export default function SideBarContainer() {
   const { t } = useTranslation();
